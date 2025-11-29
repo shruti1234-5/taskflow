@@ -66,6 +66,11 @@ export default function LoginPage() {
             {error}
           </p>
         )}
+        {error && (
+          <p className="text-red-500 text-center mb-3 text-sm font-medium animate-[shake_0.2s]">
+            {error}
+          </p>
+        )}
 
         <form onSubmit={handleSubmit} className="space-y-5">
           {/* Email */}
@@ -106,6 +111,50 @@ export default function LoginPage() {
             />
           </div>
 
+          {/* Submit button */}
+          <button
+            type="submit"
+            disabled={loading}
+            className={`w-full bg-indigo-600 text-white py-2.5 rounded-lg font-semibold shadow-md 
+            transition duration-300 transform
+            ${loading ? "opacity-70 cursor-not-allowed" : "hover:bg-indigo-700 hover:shadow-xl hover:-translate-y-0.5"}
+            active:scale-[0.98]`}
+          >
+            {loading ? "Signing In..." : "Sign In"}
+          </button>
+        </form>
+      </div>
+
+      {/* CSS animations */}
+      <style jsx>{`
+        @keyframes fadeIn {
+          from {
+            opacity: 0;
+            transform: translateY(12px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        @keyframes slideDown {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0px);
+          }
+        }
+        @keyframes shake {
+          0% { transform: translateX(0); }
+          25% { transform: translateX(-3px); }
+          50% { transform: translateX(3px); }
+          75% { transform: translateX(-3px); }
+          100% { transform: translateX(0); }
+        }
+      `}</style>
           {/* Submit button */}
           <button
             type="submit"
