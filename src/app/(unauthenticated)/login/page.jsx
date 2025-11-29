@@ -67,7 +67,7 @@ export default function LoginPage() {
       <form onSubmit={handleSubmit} className="space-y-5">
         {/* Email */}
         <div>
-          <label className="block text-gray-700 dark:text-gray-200 text-sm font-semibold mb-2">
+          <label className="block text-gray-700 dark:text-black-200 text-sm font-semibold mb-2">
             Email
           </label>
           <input
@@ -77,13 +77,13 @@ export default function LoginPage() {
             onChange={handleChange}
             required
             placeholder="Enter your email"
-            className="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+            className="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-black-100"
           />
         </div>
 
         {/* Password */}
         <div>
-          <label className="block text-gray-700 dark:text-gray-200 text-sm font-semibold mb-2">
+          <label className="block text-gray-700 dark:text-black-200 text-sm font-semibold mb-2">
             Password
           </label>
           <input
@@ -93,7 +93,7 @@ export default function LoginPage() {
             onChange={handleChange}
             required
             placeholder="Enter your password"
-            className="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-700 dark:text-black rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+            className="w-full px-4 py-2.5 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-black-100"
           />
         </div>
 
